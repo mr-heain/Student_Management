@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Student Details</title>
+<link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div class="student-card">
+    <h2>🎓 Student Details</h2>
+
+    <div class="detail-row">
+        <span class="label">ID</span>
+        <span th:text="${student.id}"></span>
+    </div>
+
+    <div class="detail-row">
+        <span class="label">Name</span>
+        <span th:text="${student.name}"></span>
+    </div>
+
+    <div class="detail-row">
+        <span class="label">Course</span>
+        <span th:text="${student.course}"></span>
+    </div>
+
+    <div class="detail-row">
+        <span class="label">Department</span>
+        <span th:text="${student.dept}"></span>
+    </div>
+
+    <br>
+
+    <a th:href="@{/}" class="back-btn">⬅ Back to List</a>
+</div>
+
+</body>
+</html>
