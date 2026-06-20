@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>Update data</h2>
+<form th:action="@{/saveStudent}" th:object="${student}" method="post">
+
+    <input type="hidden" th:field="*{id}">
+
+    Name: <input type="text" th:field="*{name}"><br><br>
+    Course: <input type="text" th:field="*{course}"><br><br>
+    Dept: <input type="text" th:field="*{dept}"><br><br>
+
+    <button type="submit" >Update</button>
+</form>
+<br>
+<a th:href="@{/}"style="border:2px groove yellow;color:red;border-radius:20px;padding: 6px 12px;text-decoration:none;">Back to List</a>
+</body>
+</html>
